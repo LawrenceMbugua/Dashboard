@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Dashboard</title>
+  
+  <!-- HTML -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="header">
+   
+   <div id="logo">
+     <img src="profile.jpeg" alt="profile.jpeg">
+   </div>
+   
+   <div id="hamburger">
+    <i class="fa fa-bars"></i>
+   </div>
+</div>
+ 
+ 
+   
+<div class="options">
+    
+     <select onchange="changeMonth()" name="month" class="month"  id="month">
+       
+       <option value="Annual">Annual</option>
+       <option selected value="January">Jan</option>
+       <option value="February">Feb</option>
+       <option value="March">Mar</option>
+       <option value="April">Apr</option>
+       <option value="May">May</option>
+       <option value="June">Jun</option>
+       <option value="July">Jul</option>
+       <option value="August">Aug</option>
+       <option value="September">Sep</option>
+       <option value="October">Oct</option>
+       <option value="November">Nov</option>
+       <option value="December">Dec</option>
+     </select>
+     
+     <select onchange="changeMode()" name="expenses" class="mode" id="mode">
+       <option value="expenses">Expenses</option>
+       <option value="revenues">Revenues</option>
+     </select>
+     
+     <a class="link" href="form.html">Edit</a>
+     
+
+</div>
+   
+   
+<div class="main">
+  <div class="sidebar">
+    
+  </div>
+  
+  <div class="totalDisplayContainer">
+     <span> <span id="totalDisplay" class="totalDisplay"> 0</span>
+  </div>
+
+  
+  <div id="container" class="container"></div>
+</div>
+  
+</div>
+   
+<div>
+
+ <form class="formContainer" id="formContainer" style="visibility: hidden; display: none">
+   
+    <p class="formTitle" id="formTitle">Expenses</p>
+   
+    <select onchange="changeMonth()" name="month" class="month"  id="monthFormInput">
+       
+       <option value="January">Jan</option>
+       <option value="February">Feb</option>
+       <option value="March">Mar</option>
+       <option value="April">Apr</option>
+       <option value="May">May</option>
+       <option value="June">Jun</option>
+       <option value="July">Jul</option>
+       <option value="August">Aug</option>
+       <option value="September">Sep</option>
+       <option value="October">Oct</option>
+       <option value="November">Nov</option>
+       <option value="December">Dec</option>
+    </select>
+
+   
+   
+ </form>
+
+</div>
+
+  <script src="main.js" defer></script>
+</body>
+  </html>
