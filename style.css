@@ -1,0 +1,499 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+body {
+  font-size: 12pt;
+  font-family: sans-serif;
+  position: relative;
+  font-weight: bolder;
+  background: #F2F5FB;
+    
+}
+
+.header {
+  height: 56px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient( #4A148C, 90%,#F2F5FB);
+  color: grey;
+  position: sticky;
+  z-index: 5;
+  top: 0px;
+  left: 0;
+  font-weight: bolder;
+ 
+}
+
+.header #logo, #hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center 
+}
+
+.header #logo {
+  height: 40px;
+  margin-left: 16px;
+  
+  padding: 8px;
+  border-radius: 8px;
+  
+}
+
+.header #logo img {
+  border-radius: 50%;
+  height: 34px;
+  width: 34px;
+  opacity: 1;
+  border: 2px solid lightgrey
+}
+
+.header #hamburger {
+  height: 40px;
+  cursor: pointer;
+  margin-right: 16px;
+ 
+  padding: 8px;
+  border-radius: 8px
+}
+
+.options {
+  min-height: 60px;
+  width: 100%;
+  color:  #4A148C;
+  background:  #ffff;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  font-size: 12pt;
+  border: none
+}
+
+.options select{
+  font-weight: bold;
+  border: none;
+  background: none;
+  color: #4A148C;
+  font-size: 12pt;
+  border: 1px solid violet;
+  border-radius: 2px;
+  
+}
+
+.options .month{
+ padding: 4px 8px;
+  width: fit-content
+  
+}
+
+.options .mode {
+  padding: 4px 8px;
+  width: 120px;
+  
+}
+
+.options .totalDisplay {
+  width: 100px;
+  
+  color: red;
+  font-style: italic;
+  font-size: 2em
+}
+
+
+.options select:focus {
+  outline: none;
+
+}
+
+
+
+
+.options a {
+  text-decoration: none;
+  color: blueviolet;
+}
+
+
+
+
+.totalDisplay::before {
+  content: "TOTAL: $"
+}
+
+.totalDisplayContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+ 
+  margin-top: 20px;
+  color: black;
+  font-style: italic;
+  text-align: center;
+  font-size: .8em
+}
+
+.totalDisplay {
+  
+  
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 56px;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 50px
+ 
+  
+}
+
+
+
+.container .donut {
+  margin-top: 15px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+.visible {
+  opacity: 1;
+  border: 1px solid red;
+  text-align: center;
+ 
+}
+
+
+
+
+.container .donut .content {
+  background: #F2F5FB;
+  width: 175px;
+  height: 175px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 5px 0px beige
+}
+
+.donut .content .percent {
+  justify-self: end;
+  color: midnightblue;
+  font-size: 16pt;
+  position: absolute;
+  top:15%;
+  left: 50%
+}
+.donut .content .percent::after {
+  content: "%";
+  
+}
+
+.donut .content .figure {
+  position: absolute;
+  top: 80%;
+  
+  font-size: 12pt
+}
+
+.donut .content .figure::before {
+  content: "$";
+  
+}
+.donut .content .category {
+  font-size: 12pt;
+  color: maroon;
+  position: absolute;
+  top: 50%;
+ 
+  text-transform: capitalize
+}
+
+
+
+.barSection {
+  border-radius: 8px;
+  width: 80%;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background: beige
+}
+
+.barSection .barContainer {
+  width: 90%;
+  background: #ffff;
+  height: 6px;
+  border-radius: 2px;
+  align-self: center;
+  margin-bottom: 10px
+}
+
+.barSection .info {
+  display: flex;
+  width: 90%;
+  align-items: flex-end;
+  justify-content: space-between
+}
+
+.barSection .barContainer .bar {
+  width: 50%;
+  height:100%;
+  background: linear-gradient(to right, lawngreen 80%, #ffff 95%);
+  border-radius: 2px
+}
+
+.barSection .info .figure {
+  font-size: 8pt
+}
+
+.footer {
+  width: 340px;
+  height: 200px;
+  background: midnightblue;
+  position: relative;
+  z-index: 30;
+  
+ 
+}
+
+
+
+
+/* Form styles*/
+
+#formContainer {
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+  margin: 15% auto;
+  border: 1px solid violet;
+  border-radius: 2px
+  
+}
+
+#formContainer input, select, label, #formTitle{
+  margin: 0px 10px 10px 10px;
+  padding: 10px;
+  
+}
+
+#formContainer input, select {
+  background: #ffff;
+  border: none
+}
+#formContainer .formTitle {
+  text-transform: capitalize
+}
+
+#formContainer select {
+  width: 50%
+}
+
+#formContainer input:focus, select:focus{
+  outline: none
+}
+
+#formContainer input[type="number"]{
+ margin-top: 0px
+}
+
+#formContainer label {
+ font-weight: normal;
+ padding: 5px;
+ text-transform: uppercase;
+
+}
+
+#formContainer #submitButton{
+  background: blueviolet;
+  color: #ffff;
+  outline: none;
+  border: none;
+  
+  text-transform: uppercase
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media  screen and (min-width: 821px) {
+  body {
+    visibility: hidden
+  }
+  
+  .header {
+    height: 150px;
+    font-size: 32px
+  }
+  
+ .header #hamburger {
+  height: 40px;
+  cursor: pointer;
+  margin-right: 16px;
+  border: 2px solid;
+  padding: 32px;
+  border-radius: 8px;
+  
+}
+
+  .options {
+    height: 200px;
+    background: ghostwhite;
+    color: black;
+    background: beige;
+    font-size: 32px;
+    position: fixed;
+  }
+  
+  .options select {
+    font-size: 32px
+  }
+  
+  .options .month{
+  padding: 2px 5px;
+  width: 150px;
+  color: black
+}
+
+.options .mode {
+  padding: 2px 5px;
+  width: 200px;
+  color: black;
+}
+
+
+
+
+
+.main {
+  border: 1px solid red;
+  display: flex;
+  width: 100vw;
+  align-items: flex-start;
+  height: 100vh;
+  margin-top: 200px
+}
+
+
+.main .sidebar {
+  border: 1px solid black;
+  width: 20vw;
+  height: 100%;
+  background: beige
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0;
+  gap: 50px;
+  align-items: center;
+  justify-content: space-evenly;
+  border: 1px solid;
+  width: 80vw;
+  
+  transition: 1s
+  
+}
+
+
+
+.container .donut {
+ margin-top: 30px;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ opacity: 0;
+
+}
+
+
+
+
+
+.container .donut .content {
+  background: ghostwhite;
+  width: 210px;
+  height: 210px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 0 5px 0px beige
+}
+
+.donut .content .percent {
+  justify-self: end;
+  color: midnightblue;
+  font-size: 30pt;
+  position: absolute;
+  top:15%;
+  left: 50%
+}
+.donut .content .percent::after {
+  content: "%";
+}
+
+.donut .content .figure {
+  position: absolute;
+  top: 80%;
+  
+  font-size: 18pt
+}
+
+.donut .content .figure::before {
+  content: "$";
+  
+}
+.donut .content .category {
+  font-size: 17pt;
+  color: maroon;
+  position: absolute;
+  top: 50%;
+ 
+  text-transform: capitalize
+}
+
+
+
+
+
+}
